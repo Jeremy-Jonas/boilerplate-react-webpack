@@ -6,6 +6,7 @@ To install:
 
 ```sh
 yarn
+yarn start
 ```
 
 * Open a browser and navigate to http://localhost:3000
