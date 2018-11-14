@@ -6,6 +6,8 @@ To install:
 
 ```sh
 yarn
+yarn knex migrate:latest
+yarn knex seed:run
 yarn start
 ```
 
