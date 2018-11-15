@@ -6,8 +6,9 @@ class App extends React.Component {
   state = {
     temp: null,
     updated: null,
-    city: null,
-    ip: null
+    locationURL: null,
+    ip: null,
+    city: null
   }
 
   componentDidMount () {
@@ -16,8 +17,15 @@ class App extends React.Component {
 
   getIP () {
     request.get('https://api.ipify.org?format=json')
-    .then(res=>{this.setState({ip: res.body.ip})})
-    .then(request.get('https://geo.ipify.org/api/v1?apiKey=at_SEaLHHzyDOtWBhKfMMh9HiRxcVM1j&ipAddress=' + this.state.city))
+    .then(res => {this.setState({
+      ip: res.body.ip,
+      locationURL: 'https://geo.ipify.org/api/v1?apiKey=at_SEaLHHzyDOtWBhKfMMh9HiRxcVM1j&ipAddress=' + res.body.ip
+    })})
+    let url = 'https://geo.ipify.org/api/v1?apiKey=at_SEaLHHzyDOtWBhKfMMh9HiRxcVM1j&ipAddress=' + res.body.ip
+    this.getCity (url)
+    
+    
+
     /*request.get('http://api.apixu.com/v1/current.json?key=3beb485786ef46ad9f8223822181311&q=auckland')
     .then(res => {
       this.setState({
@@ -28,6 +36,14 @@ class App extends React.Component {
     })*/
   }
 
+  getCity (url) {
+    console.log(url)
+    let locReq = this.state.locationURL
+    request.get(locReq)
+    .then(res => {this.setState({city: res.body.location.city})})
+    
+  }
+
 
 
   render () {
@@ -35,10 +51,10 @@ class App extends React.Component {
       <div>
         <p><button>Add new data</button></p>
         <p><button>View existing</button></p>
-        <p class='temp'>Today's outdoor temp: {this.state.temp}</p>
-        <p class='updated'>(as at {this.state.updated})</p>
+        <p className='temp'>Today's outdoor temp: {this.state.temp}</p>
+        <p className='updated'>(as at {this.state.updated})</p>
         <p>{this.state.ip}</p>
-        <p class='location'>Location set as {this.state.city}. (Determined by your IP)</p>
+        <p className='location'>Location set as {this.state.city}. (Determined by your IP) [{this.state.locationURL}]</p>
       </div>
     )
   }
