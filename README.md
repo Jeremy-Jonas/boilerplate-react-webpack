@@ -9,7 +9,7 @@ Once this utility is complete you will be able to add, edit and remove parameter
 
 * Clone down repo.
 * CD to workspace/project-filament.
-* Open a terminal and run:
+* In the terminal run:
 
 ```sh
 yarn
@@ -17,3 +17,19 @@ yarn start
 ```
 
 * Open a browser and navigate to http://localhost:3000
+
+
+#### Clearing the database:
+
+**WARNING! The following steps will result in PERMANENT data loss, proceed at your own risk**
+
+If for any reason you wish to clear **ALL** data from the database - 
+
+* CD to workspace/project-filament.
+* In the terminal run:
+
+```sh
+yarn
+yarn knex migrate:latest
+yarn knex seed:run
+```
