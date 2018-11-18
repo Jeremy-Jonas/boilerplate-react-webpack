@@ -1,3 +1,6 @@
+Welcome to Project Filament!
+A utility designed to help you reduce failed prints by allowing you to record your successful print parameters for use next time you print.
+
 To install:
 
 * Clone down repo.
@@ -6,8 +9,6 @@ To install:
 
 ```sh
 yarn
-yarn knex migrate:latest
-yarn knex seed:run
 yarn start
 ```
 
