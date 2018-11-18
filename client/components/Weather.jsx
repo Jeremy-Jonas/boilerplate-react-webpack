@@ -68,12 +68,18 @@ class Weather extends React.Component {
 
   render () { //render all the gathered data in the component to display on the site
     return (
-      <div>
-        <h1>Current weather in {this.state.location.returnedCity}</h1>
+      <div className='weather'>
+        <h2 className='temp'>It is currently {this.state.weather.temp} outside.</h2>
+        <h3 className='temp'>The humidity is {this.state.weather.humidity}.</h3>
+        <h3 className='conditions'>It is {this.state.weather.condition} <img src={'http:' + this.state.weather.icon}></img></h3>
+        <p>Location determined by your IP is {this.state.location.returnedCity}<br />
+        Weather data last updated {this.state.weather.updated}</p>
+
+        {/* <h1>Current weather in {this.state.location.returnedCity}</h1>
         <h2>{this.state.weather.condition}</h2>
         <img src={'http:' + this.state.weather.icon}></img>
         <h3>The temparature is {this.state.weather.temp} and the humidity is {this.state.weather.humidity}.</h3>
-        <p>Weather data last updated {this.state.weather.updated}</p>
+        <p>Weather data last updated {this.state.weather.updated}</p> */}
 
         {/* 
         used to test all APIs were returning the data we wanted
