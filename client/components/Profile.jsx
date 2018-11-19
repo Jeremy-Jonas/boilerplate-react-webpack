@@ -1,16 +1,12 @@
 import React from 'react'
-import request from 'superagent'
+// import request from 'superagent'
 
 class Profile extends React.Component {
-  state = {
-
-  }
-
   componentDidMount () {
-    //this.whateverFunction
+    // this.whateverFunction
   }
 
-  //whateverFunction
+  // whateverFunction
 
   render () {
     return (
