@@ -1,7 +1,7 @@
 import React from 'react'
 import request from 'superagent'
 
-class Profile extends React.Component {
+class Nav extends React.Component {
   state = {
 
   }
@@ -14,11 +14,11 @@ class Profile extends React.Component {
 
   render () {
     return (
-      <div className='profile eight columns'>
-        <h1 className='profileText'>This is the profile component!</h1>
+      <div className='nav four columns'>
+        <h1>This is the Nav component!</h1>
       </div>
     )
   }
 }
 
-export default Profile
+export default Nav

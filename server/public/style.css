@@ -1,3 +1,6 @@
+.background{
+  background-color: #F96901
+}
 .temp{
   margin-bottom: 1px
 }
@@ -15,6 +18,12 @@
 .conditions{
   margin-top: 1px;
   margin-bottom: 1px
+}
+
+.nav{
+  padding: 10px 30px;
+  background-color: #1C1C1C;
+  color: #F96901
 }
 
 .profile{

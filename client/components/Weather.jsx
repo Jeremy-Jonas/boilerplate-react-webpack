@@ -68,7 +68,7 @@ class Weather extends React.Component {
 
   render () { //render all the gathered data in the component to display on the site
     return (
-      <div className='weather'>
+      <div className='weather twelve columns'>
         <h2 className='temp'>It is currently {this.state.weather.temp} outside.</h2>
         <h3 className='temp'>The humidity is {this.state.weather.humidity}.</h3>
         <h3 className='conditions'>It is {this.state.weather.condition} <img src={'http:' + this.state.weather.icon}></img></h3>
