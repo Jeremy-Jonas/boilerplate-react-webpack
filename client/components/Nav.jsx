@@ -11,7 +11,7 @@ class Nav extends React.Component {
   render () {
     return (
       <div className='nav four columns'>
-        <h1>This is the Nav component!</h1>
+        <h4>This is the Nav component!</h4>
       </div>
     )
   }

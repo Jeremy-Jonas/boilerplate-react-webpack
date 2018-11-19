@@ -31,6 +31,11 @@
   padding: 10px 30px
 }
 
+.header{
+  padding: 10px 30px;
+  text-align: center
+}
+
 .profileText{
   color: #1C1C1C
 }

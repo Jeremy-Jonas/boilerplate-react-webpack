@@ -11,7 +11,7 @@ class Profile extends React.Component {
   render () {
     return (
       <div className='profile eight columns'>
-        <h1 className='profileText'>This is the profile component!</h1>
+        <h4 className='profileText'>This is the profile component!</h4>
       </div>
     )
   }
