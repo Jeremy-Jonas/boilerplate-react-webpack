@@ -71,7 +71,7 @@ class Weather extends React.Component {
       <div className='weather twelve columns'>
         <h2 className='temp'>It is currently {this.state.weather.temp} outside.</h2>
         <h3 className='temp'>The humidity is {this.state.weather.humidity}.</h3>
-        <h3 className='conditions'>It is {this.state.weather.condition} <img src={'http:' + this.state.weather.icon}></img></h3>
+        <h3 className='conditions'>Conditions: {this.state.weather.condition} <img src={'http:' + this.state.weather.icon}></img></h3>
         <p>Location determined by your IP is {this.state.location.returnedCity}<br />
         Weather data last updated {this.state.weather.updated}</p>
 
