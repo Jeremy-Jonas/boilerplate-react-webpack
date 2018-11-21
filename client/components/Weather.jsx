@@ -44,7 +44,7 @@ class Weather extends React.Component {
       this.setState({
         location: {
           returnedCity: res.body.location.city,
-          urlWeatherApi: 'http://api.apixu.com/v1/current.json?key=3beb485786ef46ad9f8223822181311&q=' + res.body.location.city //append the returned device location to the URL ready to send to the weather API
+          urlWeatherApi: 'http://api.apixu.com/v1/current.json?key=4f9a84e0b68e41e0ac7224208182111&q=' + res.body.location.city //append the returned device location to the URL ready to send to the weather API
         }
       })
       this.getWeather() //now run the next function which will use the url created above to request the weather for the location
