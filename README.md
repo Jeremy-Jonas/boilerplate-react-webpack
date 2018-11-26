@@ -22,7 +22,7 @@ yarn start
 ## Clearing the database:
 
 **WARNING! The following steps will result in PERMANENT data loss, proceed at your own risk**
-
+<details><summary>Show Instructions</summary>
 If for any reason you wish to clear **ALL** data from the database - 
 
 * CD to workspace/project-filament.
@@ -33,3 +33,4 @@ yarn
 yarn knex migrate:latest
 yarn knex seed:run
 ```
+</details>
